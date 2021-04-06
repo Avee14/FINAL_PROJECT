@@ -68,7 +68,6 @@ const setUprefrow = (data) =>{
     });
 
     refproRow.innerHTML = html;
-
   }
 
 
