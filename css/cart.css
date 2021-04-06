@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@200&display=swap');
+
+
+:root{
+    /* Font Color */
+    --nav-bar-grey: #3f4957;
+    --cool-gray: #ADB5BD;
+    --French-Gray: #6C757D;
+    --Neutral-grey: #E9ECEF;
+    --Black-Tint: #343A40;
+    --white: white;
+  
+  
+    
+  
+  
+  
+    /* Font Color */
+    
+    /* Gradient Color */
+    --grey-tint: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
+    /* Gradient Color */
+    
+    /* Theme Font Family */
+    --Audiowide:'Audiowide',cursive;
+    --Ubuntu:'Ubuntu',cursive;
+    --Roboto:'Roboto',cursive;
+    --Nunito:'Nunito Sans',cursive;
+    --Abel:'Abel',cursive;
+    --saria: 'Saira Condensed', cursive;
+    /* Theme Font Family */
+    
+  
+  }
+
+  body,html{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: var(--saria);
+    font-weight: 800;
+  }
+  
+
+  /** Styling For Cart Header **/
+
+
+
+  .cart-text .cart-col{
+      position: absolute;
+      top: 1.5rem;
+      font-family: var(--Ubuntu);
+      color: var(--Neutral-grey);
+      background-color: var(--French-Gray) !important;
+
+
+
+}
+  
+  /** x  Styling For Cart Header x **/
+  .cart-cont{
+    padding-top: 5rem;
+  }
+  
+
+  .cart-pro-img{
+    min-width: 200px;
+    min-height: 200px;
+  }
+
+.set-quantity{
+  position: relative;
+}
+.set-quantity::after{
+  width: auto;
+  height: auto;
+  text-align: center;
+  position: absolute;
+}
+
+.page-item input{
+  width: 3rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.page-link:focus{
+  box-shadow: none;
+
+}
+
+.removebtn{
+  border: none;
+  border-radius: 2rem;
+  background: var(--French-Gray);
+  color: var(--white);
+}
+
+.removebtn:hover{
+  border: none;
+  border-radius: 2rem;
+  background: transparent;
+  color: var(--Black-Tint);
+}
+.wishlistbtn{
+  border: none;
+  border-radius: 2rem;
+  background: var(--French-Gray);
+  color: var(--white);
+}
+
+.wishlistbtn:hover{
+  border: none;
+  border-radius: 2rem;
+  background: transparent;
+  color: var(--Black-Tint);
+}
+
+  /** x  Styling For Cart Items x **/
+
+  

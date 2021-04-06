@@ -1,0 +1,166 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <!-- Bootstrap CDN css -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <!-- x Bootstrap CDN x css -->
+
+      <!-- Custom CSS -->
+      <link rel="stylesheet" href="./adminstyles.css">
+      <!--  x Custom CSS x  -->
+  
+  
+      
+</head>
+<body>
+
+    <!-- Nav bar-->
+    <section id="nav-bar">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">G E S</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Orders</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Staff</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Logout</a>
+              </li>
+              
+           
+              
+          
+      </section>
+
+
+      <!-- Add Products field -->
+      
+      <section id="productadd">
+
+       <div class="container conatiner-fluid">
+         <div class="row">
+           <div class="maincont-col col-md-12 col-sm-12">
+             <div class="row title-row mt-5 d-flex justify-content-center text-align-center p-2">
+               
+               <div class="col col-md-4 col-sm-4 col-4 title-col ">
+                 <h6>Equipment Name</h6>
+               </div>
+               <div class="col col-md-4 col-sm-4 col-4 title-col ">
+                 <h6>Equipment Price</h6>
+               </div>
+               <div class="col col-md-4 col-sm-4 col-4 title-col ">
+                 <h6>Equipment Image </h6>
+                 
+               </div>
+              </div>
+
+
+             <div class="row input-row d-flex justify-content-center text-align-center p-2">
+               
+               <div class="col col-md-4 col-sm-4 col-4 title-col ">
+                 <input type="text" name="" id="equip-name">
+               </div>
+               <div class="col col-md-4 col-sm-4 col-4 title-col ">
+                 <span>$</span><input type="text" name="" id="equip-price">
+               </div>
+               <div class="col col-md-4 col-sm-4 col-4 title-col ">
+                 <h6>Equipment Image <input type="file" class="real-file" id="adminSelectedImg" hidden></h6>
+                 <button class="file-btn btn btn-primary bg-light text-dark btn-sm">choose file</button>
+               </div>
+              </div>
+
+             
+           </div>
+         </div>
+
+
+         <div class="row">
+           <div class="col col-md-12 d-flex mt-2">
+             <button class="btn btn-primary equip-sub-btn ml-auto" onclick="addImgtoFirebase()">Submit Data</button>
+           </div>
+
+         </div>
+       </div>
+
+       <div class="row mt-5 d-flex">
+         <img id="builderImg" src="https://firebasestorage.googleapis.com/v0/b/gymequipment-f1045.appspot.com/o/Products%2FC%3A%5Cfakepath%5CCamo-Barbell.png?alt=media&token=2dcf1b0c-b9dc-416e-8ccf-67ad07338335" alt="">
+       </div>
+
+      </section>
+
+      <!-- Add Products field -->
+  
+  
+      
+      <!-- Nav bar-->
+    
+
+
+    <!-- Fire Base docs-->
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-storage.js"></script>
+
+
+    
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyBdHgssj8FLmrsDLXlWpFLZ6nQhJ79hbUM",
+    authDomain: "gymequipment-f1045.firebaseapp.com",
+    projectId: "gymequipment-f1045",
+    storageBucket: "gymequipment-f1045.appspot.com",
+    messagingSenderId: "97119473548",
+    appId: "1:97119473548:web:b771779313c6f661edd0a9",
+    measurementId: "G-BHL874MYW3"
+    
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  //make firebase auth and db ref
+
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+  const storage = firebase.storage();
+
+  //update firestore
+  db.settings({ timestampsInSnapshots: true });
+  
+</script>
+
+<!-- Fire Base docs-->
+
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- x Bootstrap JS x -->
+
+    <!--custom js-->
+    <script src="../js/auth.js"></script>
+    <script src="./admin.js"></script>
+    <!--custom js-->
+
+</body>
+</html>

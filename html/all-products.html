@@ -1,0 +1,226 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+     <!-- Bootstrap Sheet-->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Bootstrap Sheet-->
+    
+    <!-- Fontawesome Sheet-->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/50164841d5.js" crossorigin="anonymous"></script>
+    <!-- Fontawesome Sheet-->
+
+    <!-- Custom Sheet -->
+    <link rel="stylesheet" href="../css/all-products-style.css">
+    <link rel="stylesheet" href="../css/all.css">
+    
+    <!--x Custom Sheet x-->
+
+    <!-- Auth js -->
+    <script src="../js/auth.js"></script>
+    
+    <!-- Auth js -->
+
+    
+    
+</head>
+<body>
+     <!-- Nav bar-->
+     <section id="nav-bar">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">G E S</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+            
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Account
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">My Orders</a>
+                  <a class="dropdown-item" href="./cart.html">My Cart</a>
+                  <a class="dropdown-item" href="#">My Wishlist</a>
+                  <a class="dropdown-item" href="#">Dashboard</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#" id="logoutUser" onclick="logout()">Logout</a>
+                
+                </div>
+              </li>
+              
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onkeyup="searchProducts()">
+              <button class="btn my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+       <!-- Nav bar-->
+          
+      </section>
+      
+      <section id="main-products">
+
+        <h3 class="all-pro-title">All Products</h3>
+        <div class="container cont-product container-fluid">
+          <div class="row">
+            <div class="col-md-12 filter-bar text-center">
+              <ul id="filter-list">
+                <li class="filter active" id="all_filter" onclick="all()" data-filter="all">ALL</li>
+                <li class="filter" id="weight_train_filter" onclick="weight()" data-filter="1">Weight Training</li>
+                <li class="filter" id="cardio_filter" onclick="cardio()" data-filter="2">Cardio</li>
+                <li class="filter" id="home_filter" onclick="home()" data-filter="3">Home</li>
+                <li class="filter" id="yoga_filter" onclick="yoga()" data-filter="4">Yoga</li>
+                
+              </ul>
+            </div>
+
+            
+          </div>
+        </div>
+
+      <div class="container container-fluid">
+        <div class="row pro_row" id="pro_row">
+         
+          <!-- Card 1 Ends -->
+          
+         </div> 
+          <!-- All cards end here-->
+        
+          </div>
+        
+
+
+
+          <!-- Footer Here -->
+          <section id="footer">
+            <footer class="bg-light text-center text-lg-start">
+              <!-- Grid container -->
+              <div class="container footer-content p-4">
+                <!--Grid row-->
+                <div class="row">
+                  <!--Grid column-->
+                  <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Word from the Owner</h5>
+            
+                    <p>
+                      We created this platform for all the hardworking people out there who 
+                      want to better themselves. Focusing particularly on your requirements
+                      we added all the sections that are in the Fitness. WE HOPE YOU LIKE IT!
+                    </p>
+                  </div>
+                  <!--Grid column-->
+            
+                  <!--Grid column-->
+                  <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Rate Us!</h5>
+            
+                    <p>
+                      It was our pleasure serving you. <br>
+                      <p class="rate-text">Please rate Us:</p>
+                    </p>
+                  <div class="rating-wrapper container-fluid">
+                        <input type="radio" id="star1" name="rating"><label for="star1"></label>
+                        <input type="radio" id="star2" name="rating"><label for="star2"></label>
+                        <input type="radio" id="star3" name="rating"><label for="star3"></label>
+                        <input type="radio" id="star4" name="rating"><label for="star4"></label>
+                        <input type="radio" id="star5" name="rating"><label for="star5"></label>
+                  </div>
+                  
+                  <!--Grid column-->
+                </div>
+                <!--Grid row-->
+              </div>
+              <!-- Grid container -->
+            
+              <!-- Copyright -->
+              <div class="text-center p-3 footer-bg" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2020 Copyright:
+                <a class="text-dark company-name" href="#top">G E S</a>
+              </div>
+              <!-- Copyright -->
+            </footer>
+            
+           </section>
+          <!-- x Footer Here x -->
+
+      
+         
+      </section>
+
+         <!-- Fire Base docs-->
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-storage.js"></script>
+
+
+    
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyBdHgssj8FLmrsDLXlWpFLZ6nQhJ79hbUM",
+    authDomain: "gymequipment-f1045.firebaseapp.com",
+    projectId: "gymequipment-f1045",
+    storageBucket: "gymequipment-f1045.appspot.com",
+    messagingSenderId: "97119473548",
+    appId: "1:97119473548:web:b771779313c6f661edd0a9",
+    measurementId: "G-BHL874MYW3"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  //make firebase auth and db ref
+
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+  const storage = firebase.storage();
+
+  //update firestore
+  db.settings({ timestampsInSnapshots: true });
+  
+
+</script>
+
+<!-- Fire Base docs-->
+  
+
+
+     
+     
+
+
+
+
+      <!-- Custom JS-->
+      <script src="../js/all-products.js"></script>
+      <script src="../js/cart.js"></script>
+
+      <!-- Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap JS-->
+    
+</body>
+</html>

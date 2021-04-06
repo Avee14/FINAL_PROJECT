@@ -1,0 +1,182 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <!-- Bootstrap Sheet-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- Bootstrap Sheet-->
+    
+    <!-- Fontawesome Sheet-->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="../css/all.css">
+    <!-- Fontawesome Sheet-->
+
+
+
+    <!-- Custom Sheet -->
+    <link rel="stylesheet" href="../css/cart.css">
+    
+    <!--x Custom Sheet x-->
+</head>
+<body>
+
+   
+
+    <!-- Cart -->
+
+    <section class="cart">
+
+        <!-- Left Side Div-->
+
+        <div class="container-fluid cart-cont">
+            <div class="row">
+                <div class="col-md-10 col-11 mx-auto">
+                    <div class="row mt-5 gx-3 main-row">
+
+                        <div class="col-md-12 col-lg-8 col-11 mx-auto mb-lg-0 mb-5 cart-main shadow">
+                            
+                                <h2 class="py-4 ">Cart</h2>
+                            <div class="card cartcard p-4">
+                                <div class="row cart-pro-row" id="cart-pro-row">
+
+                                  
+
+                                    <!-- Cart Product Details -->
+                                    
+                                    
+                                    
+                                </div>
+                                
+
+                            </div>
+
+                            
+                            
+                            
+                            
+
+                        </div>
+
+                        <!-- Right Side Div -->
+                        <div class="col-md-12 col-lg-4 col-11 mx-auto mt-lg-0 mt-md-5">
+                            <div class="right-side p-3 shadow bg-white">
+                                <h3 class="total-text">Total Amount Is</h3>
+                                <div class="price-indiv d-flex justify-content-between">
+                                    <p>Product Amount</p>
+                                    <p>$<span id="total_pro_amt">0.0</span></p>
+                                </div>
+                                <div class="price-ship d-flex justify-content-between">
+                                    <p>Shipping Charges</p>
+                                    <p> $<span class="pro_shipping_charge" id="pro_shipping_charge"> 20</span></p>
+                                </div>
+                                <hr>
+                                <div class="total-amt d-flex justify-content-between ">
+                                    <p>Total Amount: </p>
+                                    <p>$<span class="totalamt" id="total-amt">0</span></p>
+                                </div>
+                                <div class="btn btn-primary text-uppercase">Proceed to Checkout</div>
+                            </div>
+                            <!--Discount Code-->
+                            <div class="discount-code mt-3 shadow">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <button class="d-flex justify-content-between btn btn-primary copoun-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                            Press to apply copoun
+                                          </button>
+                                        <div class="collapse" id="collapseExample">
+                                            <div class="mt-3">
+                                                <input type="text" name="" id="discount_code1" 
+                                                placeholder="Enter Code" class="form-control font-weight-bold">
+
+                                                <small id="error-trw" class="mt-3 text-dark">Code Is gesdisc *case sensitive*</small>
+                                            </div>
+                                            <button class="btn btn-primary btn-sm mt-3" onclick="discCode()">Apply</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Delivery Date -->
+                                <div class="mt-3 shadow p-2 bg-white delivery-date">
+                                    <div class="p-3">
+                                        <h5 class="mb-4">Expected Delivery Date</h5>
+                                        <p>by 25th - 27th, March, 2021</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        
+        
+        
+        <!-- x Right Side Div x -->
+    </section>
+    
+    
+    
+
+
+    
+    
+    <!-- Cart -->
+
+ <!-- Fire Base docs-->
+ <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-storage.js"></script>
+
+
+ 
+
+<script>
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+var firebaseConfig = {
+ apiKey: "AIzaSyBdHgssj8FLmrsDLXlWpFLZ6nQhJ79hbUM",
+ authDomain: "gymequipment-f1045.firebaseapp.com",
+ projectId: "gymequipment-f1045",
+ storageBucket: "gymequipment-f1045.appspot.com",
+ messagingSenderId: "97119473548",
+ appId: "1:97119473548:web:b771779313c6f661edd0a9",
+ measurementId: "G-BHL874MYW3"
+ 
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+//make firebase auth and db ref
+
+const auth = firebase.auth();
+const db = firebase.firestore();
+const storage = firebase.storage();
+
+//update firestore
+db.settings({ timestampsInSnapshots: true });
+
+</script>
+
+    
+
+<!-- Cart js-->
+<script src="../js/cart.js" async></script>
+
+<!-- Bootstrap js-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+<!-- Bootstrap js-->
+
+</body>
+</html>

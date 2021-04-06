@@ -1,0 +1,43 @@
+[debug] [2021-03-23T15:15:51.513Z] ----------------------------------------------------------------------
+[debug] [2021-03-23T15:15:51.515Z] Command:       G:\firebase-tools-instant-win.exe C:\Users\Avinash\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\bin\firebase init
+[debug] [2021-03-23T15:15:51.515Z] CLI Version:   9.6.1
+[debug] [2021-03-23T15:15:51.515Z] Platform:      win32
+[debug] [2021-03-23T15:15:51.516Z] Node Version:  v12.18.1
+[debug] [2021-03-23T15:15:51.516Z] Time:          Tue Mar 23 2021 20:45:51 GMT+0530 (India Standard Time)
+[debug] [2021-03-23T15:15:51.516Z] ----------------------------------------------------------------------
+[debug] [2021-03-23T15:15:51.517Z] 
+[debug] [2021-03-23T15:15:51.523Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-23T15:15:51.524Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  G:\ges using bootstrap
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using gymequipment-f1045. 
+[debug] [2021-03-23T15:16:08.383Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/gymequipment-f1045 [none]
+[debug] [2021-03-23T15:16:08.794Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/gymequipment-f1045 200
+[debug] [2021-03-23T15:16:08.795Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/gymequipment-f1045 {"projectId":"gymequipment-f1045","projectNumber":"97119473548","displayName":"gymequipment","name":"projects/gymequipment-f1045","resources":{"hostingSite":"gymequipment-f1045","storageBucket":"gymequipment-f1045.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 

@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Nunito+Sans&display=swap');
+
+
+:root{
+    /* Font Color */
+    --nav-bar-grey: #3f4957;
+    --cool-gray: #ADB5BD;
+    --French-Gray: #6C757D;
+    --Neutral-grey: #E9ECEF;
+    --Black-Tint: #343A40;
+    --white: white;
+  
+  
+    
+  
+  
+  
+    /* Font Color */
+    
+    /* Gradient Color */
+    --grey-tint: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
+    /* Gradient Color */
+    
+    /* Theme Font Family */
+    --Audiowide:'Audiowide',cursive;
+    --Ubuntu:'Ubuntu',cursive;
+    --Roboto:'Roboto',cursive;
+    --Nunito:'Nunito Sans',cursive;
+    --Abel:'Abel',cursive;
+    /* Theme Font Family */
+    
+  
+  }
+
+
+html, body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-image: linear-gradient(to right top, #dcdcdc, #e2e2e2, #e9e9e9, #efefef, #f6f6f6, #f3f3f3, #f0f0f0, #ededed, #e0e0e0, #d3d3d3, #c6c6c6, #b9b9b9);
+
+}
+
+.navbar-brand{
+    font-family: var(--Audiowide);
+    color: var(--Black-Tint);
+    font-size: 1.6rem;
+}
+
+.navbar-nav{
+    padding-left: 2.5rem;
+    font-family: var(--Nunito);
+    color: var(--Neutral-grey);
+    
+}
+
+.navbar-nav li a:hover{
+    color: var(--white) !important;
+    background-color: var(--Black-Tint) !important;
+    background-size: 1.5rem;
+    height: 40px;
+}
+
+
+
+/** Animation  **/
+.motivation-title {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    /**border-right: 2px solid var(--Black-Tint) !important; /* The typwriter cursor */
+    
+    
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--Black-Tint); }
+  }
+
+  .motivation-title {
+      margin-top: 2.5rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 2rem;
+  }
+
+/** Animation  **/
+
+
+/** Carousel  **/
+.items{
+    margin-left: 15rem;
+    width: 80%;
+    height: 80%;
+    background: transparent;
+}
+    
+
+
+
+/** Carousel  **/
+
+/** ft Products **/
+.container{
+    margin-left: 5rem;
+}
+
+.ft-pro-title{
+    margin-top: 2.5rem;
+}
+.single-pro{
+    
+    background: var(--white);
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+    margin-top: 3rem;
+    transition: 0.5s;
+}
+
+.pro-title{
+    position: relative;
+    font-size: 1.3rem;
+}
+
+.single-pro img{
+    width: 80%;
+    height: auto;
+    margin-top: 2rem;
+} 
+
+.star{
+    color: rgb(63, 63, 63);
+}
+
+.single-pro:hover{
+    transform: translateY(-5px);
+    cursor: default;
+
+}
+
+/** ft Products **/
+
+/** Offer **/
+.container3{
+    background-color: var(--Neutral-grey);
+    height: 105vh;
+}
+.offer-title{
+    font-family: var(--Roboto);
+    font-size: 2rem;
+    position: relative;
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+   
+}
+
+.col-6 .modal-vest{
+    position: relative;
+    width: 70%;
+    padding-top: 2.5rem;
+    padding-left: 1.5rem;
+}
+
+.vest-detail{
+    margin-top: 5rem;
+    position: relative;
+    bottom: 1.5rem;
+}
+
+
+.exclusive-text{
+    font-family: var(--Nunito);
+    font-size: 2rem;
+    position: relative;
+    
+}
+
+.brand-logo{
+    font-family: var(--Audiowide);
+
+}
+
+.offer-pro-name{
+    font-family: var(--Abel) !important;
+}
+
+.btn-buy-offer{
+    position: relative;
+    margin-top: 6rem;
+    margin-left: 3rem;
+    border-radius: 1rem;
+    background: var(--Black-Tint);
+    background-repeat: no-repeat;
+    color: white;
+    
+}
+
+.small{
+    font-size: medium;
+}
+
+/** Offer **/
+
+
+/**-----------Footer--------------**/
+
+a.company-name{
+    font-family: var(--Audiowide) !important;
+}
+
+.rate-text{
+    font-family: var(--Nunito);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.rating-wrapper {
+    direction: rtl;
+}
+
+.rating-wrapper input{
+    display: none;
+}
+.rating-wrapper label{
+    display: inline-block;
+    cursor: pointer;
+    padding: 0.8rem;
+
+}
+
+.rating-wrapper label:before{
+    content: '\2605';
+    color: black;
+    position: absolute;
+    font-size: 25px;
+    display: inline-block;
+    top: 6rem;
+    
+    
+  
+}
+
+.rating-wrapper label:after{
+    content: '\2605';
+    color: yellow;
+    position: absolute;
+    font-size: 25px;
+    display: inline-block;
+    top: 6rem;
+    opacity: 0;
+    
+}
+
+.rating-wrapper label:hover:after,
+.rating-wrapper label:hover ~ label:after,
+.rating-wrapper input:checked ~ label:after{
+    opacity: 1;
+}
+
+.footer-bg{
+    margin-top: 1.2rem;
+    width: 100%;
+    background-size: cover;
+    
+}
+/**-----x------Footer---------x-----**/

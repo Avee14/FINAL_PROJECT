@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Nunito+Sans&display=swap');
+
+
+:root{
+    /* Font Color */
+    --nav-bar-grey: #3f4957;
+    --cool-gray: #ADB5BD;
+    --French-Gray: #6C757D;
+    --Neutral-grey: #E9ECEF;
+    --Black-Tint: #343A40;
+    --white: white;
+  
+  
+    
+  
+  
+  
+    /* Font Color */
+    
+    /* Gradient Color */
+    --grey-tint: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
+    /* Gradient Color */
+    
+    /* Theme Font Family */
+    --Audiowide:'Audiowide',cursive;
+    --Ubuntu:'Ubuntu',cursive;
+    --Roboto:'Roboto',cursive;
+    --Nunito:'Nunito Sans',cursive;
+    --Abel:'Abel',cursive;
+    /* Theme Font Family */
+    
+  
+  }
+
+
+html, body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-image: linear-gradient(to right top, #dcdcdc, #e2e2e2, #e9e9e9, #efefef, #f6f6f6, #f3f3f3, #f0f0f0, #ededed, #e0e0e0, #d3d3d3, #c6c6c6, #b9b9b9);
+
+}
+
+.navbar-brand{
+    font-family: var(--Audiowide);
+    color: var(--Black-Tint);
+    font-size: 1.6rem;
+}
+
+.navbar-nav{
+    padding-left: 2.5rem;
+    font-family: var(--Nunito);
+    color: var(--Neutral-grey);
+    
+}
+
+.navbar-nav li a:hover{
+    color: var(--white) !important;
+    background-color: var(--Black-Tint) !important;
+    background-size: 1.5rem;
+    height: 40px;
+}
+
+table{
+    font-family: var(--Nunito);
+}
+
+
+.title-row{
+    border: grey 0.02rem solid;
+    margin-top: 1.5rem;
+    
+    border-radius: 1.2rem;
+    background: white;
+
+}
+
