@@ -1,6 +1,6 @@
 
 
-//const proCard = document.getElementsByClassName('pro_row');
+
 
 //const addtocart = document.getElementsByClassName('addtocart');
 
