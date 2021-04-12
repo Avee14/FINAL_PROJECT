@@ -46,8 +46,178 @@
     font-weight: 800;
   }
   
+  .navbar-brand{
+    font-family: var(--Audiowide);
+    color: var(--Black-Tint);
+    font-size: 1.6rem;
+}
 
-  /** Styling For Cart Header **/
+.navbar-nav{
+    padding-left: 2.5rem;
+    font-family: var(--Nunito);
+    color: var(--Neutral-grey);
+    
+}
+
+.navbar-nav li a:hover{
+    color: var(--white) !important;
+    background-color: var(--Black-Tint) !important;
+    background-size: 1.5rem;
+    height: 40px;
+}
+
+
+/** x nav bar x **/
+
+.btn{
+  background: var(--French-Gray);
+  color: var(--white);
+  border-radius: 1.5rem;
+  border: none;
+}
+
+.btn:hover{
+  background: transparent;
+  color: var(--Black-Tint);
+  border: none;
+}
+
+/* cart styles */
+
+.product-area {
+  display: flex;
+  justify-content: space-evenly;
+  width: 40%;
+  margin: auto;
+}
+
+.cart-heading {
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+.cart-items {
+  width: 40%;
+  margin: auto;
+  padding: 1rem 0;
+}
+
+.item {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.remove i {
+  margin-left: 4rem;
+  cursor: pointer;
+  font-size: 2rem;
+  color: var(--background-color);
+}
+
+.remove i:hover {
+  color: var(--hover-color);
+}
+
+.cart-pict {
+  width: 100px;
+  
+}
+.cart-pict img {
+  width: 100%;
+  height:80px;
+  object-fit: cover;
+}
+
+.qty {
+  display: flex;
+}
+.price p {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+.qty span {
+  margin: 0 1rem;
+  font-size: 1.4rem;
+}
+.fa-minus-circle,
+.fa-plus {
+  font-size: 1.4rem;
+  color: var(--background-color);
+}
+hr {
+  height: 3px;
+  background: var(--background-color);
+}
+
+.hr {
+  width: 40%;
+  margin: auto;
+  height: 3px;
+  background: var(--background-color);
+}
+
+.remove i {
+  font-size: 1rem;
+  margin: 1rem;
+  padding: 0 0.6rem;
+}
+
+.named-pic{
+  font-size:2rem;
+}
+.right{
+  padding:0 4rem;
+}
+.headings{
+  display:flex;
+ justify-content: space-evenly;
+}
+
+.cart-heading{
+  margin-left:5rem;
+  font-size: 1.5rem;
+}
+.total {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.totals{
+  font-size:1.2rem;
+  font-weight: 800;
+}
+
+.calc-total{
+font-size:1.8rem;
+color:var(--background-color);
+}
+
+@media (max-width: 998px) {
+  .cart-items,
+  .product-area,
+  .hr {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** Styling For Cart Header **/
 
 
 

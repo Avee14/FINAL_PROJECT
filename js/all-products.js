@@ -130,6 +130,183 @@ function totalCost(product){
 onLoadCartNum();
 
 
+//Changes made in diff pc
+
+function totalCost (product){
+  // console.log(product.equipmentPrice);
+  let cartCost = localStorage.getItem('totalCost');
+  
+  
+  if(cartCost != null){
+    cartCost = parseInt(cartCost);
+    localStorage.setItem("totalCost", cartCost + product.equipmentPrice);
+  }else{
+    localStorage.setItem("totalCost", product.equipmentPrice);
+  }
+  
+
+}
+
+
+function displayCart(){
+  let cartItems=localStorage.getItem('productsInCart');
+  cartItems=JSON.parse(cartItems);
+  
+  let productContainer=document.querySelector('.cart-row');
+  let cartCost = localStorage.getItem('totalCost');
+  
+  if(cartItems && productContainer){
+      productContainer.innerHTML='';
+      Object.values(cartItems).map(item=>{
+          productContainer.innerHTML+=`
+          
+  
+    <div class="item">
+          <div class="cart-pict">
+              <img src="../assets/products/${item.tag}.png" alt="" />
+              <div class="remove">
+                 <i class="fas fa-trash-alt"></i>
+              </div>
+            <p class="named-pic">${item.tag}</p>
+          </div>
+          <div class="price">
+            <p class="proPrice">$${item.equipmentPrice}</p>
+          </div>
+          <div class="qty">
+            <i class="fas fa-minus-circle"></i>
+            <p><span class="proQty">${item.isCart}</span></p>
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="calc-total">$${item.isCart * item.equipmentPrice}</div>
+        </div>
+        <hr />
+       
+          `;
+      });
+  
+      productContainer.innerHTML+=`
+      <div class="total">
+      <div class="total-price">
+        <p class="cartTotal">$${cartCost}</p>
+      </div>
+    </div> `
+  }
+  deleteButtons();
+  manageQuantity();
+  }
+  
+  function deleteButtons(){
+      let deleteButtons=document.querySelectorAll('.fa-trash-alt');
+      let productName;
+      let productNumbers =localStorage.getItem('cartnum');
+      let cartItems=localStorage.getItem('productsInCart');
+      cartItems=JSON.parse(cartItems);
+      let cartCost=localStorage.getItem('totalCost');
+    
+      for (let i=0; i<deleteButtons.length; i++){
+          deleteButtons[i].addEventListener('click', ()=>{
+           productName=deleteButtons[i].parentElement.parentElement.textContent.trim().toLowerCase().replace( / /g, '');
+     
+  
+           localStorage.setItem('cartNumbers', productNumbers-cartItems[productName].inCart);
+           localStorage.setItem('totalCost',cartCost-(cartItems[productName].equipmentPrice*cartItems[productName].isCart));
+           delete cartItems[productName];
+           localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+          
+
+         
+           displayCart();
+           onLoadCartNum();
+          })
+      }
+  
+  }
+  
+  function manageQuantity(){
+      let decreaseButtons=document.querySelectorAll('.fa-minus-circle');
+      let increaseButtons=document.querySelectorAll('.fa-plus');
+  
+      let cartItems = localStorage.getItem('productsInCart');
+      let currentQuantity = 0;
+      let currentProduct = "";
+      cartItems = JSON.parse(cartItems);
+      // console.log(cartItems);
+  
+      for(let i=0;i<decreaseButtons.length; i++){
+          decreaseButtons[i].addEventListener('click',()=>{
+              currentQuantity= decreaseButtons[i].parentElement.querySelector('span').textContent;
+            
+              console.log(currentQuantity);
+              currentProduct=decreaseButtons[i].parentElement.previousElementSibling.previousElementSibling.querySelector('.named-pic').textContent;
+              console.log(currentProduct);
+  
+              if( cartItems[currentProduct].isCart > 1){
+                  cartItems[currentProduct].isCart -= 1;
+                  cartnum( cartItems[currentProduct], "decrease" );
+  
+                  totalCost(cartItems[currentProduct], "decrease");
+                  localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+                  displayCart();
+              }
+  
+              
+          });
+      }
+  
+      for(let i=0;i<increaseButtons.length; i++){
+        increaseButtons[i].addEventListener('click',()=>{
+            console.log('increase');
+            currentQuantity= increaseButtons[i].parentElement.querySelector('span').textContent;
+            console.log(currentQuantity);
+
+
+            currentProduct=increaseButtons[i].parentElement.previousElementSibling.previousElementSibling.querySelector('.named-pic').textContent;
+            console.log(currentProduct);
+
+           
+                cartItems[currentProduct].isCart+=1;
+                cartnum( cartItems[currentProduct] );
+
+                totalCost(cartItems[currentProduct]);
+                localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+                displayCart();
+        })
+    }
+  
+  }
+  onLoadCartNum();
+  displayCart();
+  uploadCarttoDb();
+
+  function uploadCarttoDb(){
+    const checkoutBtn = document.querySelector('.checkoutbtn');
+
+    checkoutBtn.addEventListener('click', () => {
+      // let cartItems = localStorage.getItem('productsInCart');
+      // let productNumbers =localStorage.getItem('cartnum');
+      // let cartCost=localStorage.getItem('totalCost');
+
+      let proDiv = document.querySelectorAll('.item')
+      
+
+      for(let i=0; i<proDiv.length; i++){
+        let pronames = proDiv[i].querySelector('.named-pic').innerHTML;
+        let proPrices = proDiv[i].querySelector('.proPrice').innerHTML;
+        let proQtys = proDiv[i].querySelector('.proQty').innerHTML;
+        let proTotalCost = proDiv[i].querySelector('.calc-total').innerHTML;
+
+        
+        
+      }
+
+      
+
+      
+
+     
+    })
+  }
+
 
 //const addtocart = document.getElementsByClassName('addtocart');
 

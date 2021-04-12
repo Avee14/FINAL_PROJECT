@@ -4,33 +4,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- Bootstrap Sheet-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+       <!-- Bootstrap Sheet-->
+       
+       <!-- Fontawesome Sheet-->
+   
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+       <script src="https://kit.fontawesome.com/50164841d5.js" crossorigin="anonymous"></script>
+       <!-- Fontawesome Sheet-->
 
-    <!-- Auth js -->
+       <link rel="stylesheet" href="../css/acounts.css">
+       <!--Custom CSS-->
+       <!-- Jquery Js-->
+    <script src="../js/jqueryv3.6.0.js"></script>
+    <!-- Jquery Js-->
+
+         <!-- Auth js -->
     <script src="../js/auth.js"></script>
     
     <!-- Auth js -->
-
-
-    <!-- Bootstrap Sheet-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <!-- Bootstrap Sheet-->
-    
-    <!-- Fontawesome Sheet-->
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="../css/all.css">
-    <!-- Fontawesome Sheet-->
-
-
-
-    <!-- Custom Sheet -->
-    <link rel="stylesheet" href="../css/cart.css">
-    
-    <!--x Custom Sheet x-->
+  
 </head>
 <body>
-
+    <div id="particle-js"></div>
     <section id="nav-bar">
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -46,7 +44,7 @@
               </li>
             
               <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
+                <a class="nav-link" href="#footer">About Us</a>
               </li>
               
               <li class="nav-item dropdown">
@@ -55,7 +53,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="#">My Orders</a>
-                  <a class="dropdown-item" href="#">My Cart <span class="CartQty">0</span></a>
+                  <a class="dropdown-item" href="./cart.html">My Cart <span class="CartQty">0</span></a>
                   <a class="dropdown-item" href="#">My Wishlist</a>
                   <a class="dropdown-item" href="./accounts.html">Dashboard</a>
                   <div class="dropdown-divider"></div>
@@ -72,34 +70,43 @@
           
       </section>
 
-   
 
-    <!-- Cart -->
-
-    <div class="container-fluid cart-items">
-        <div class="row cart-row">
-            
+<div class="container container-fluid card-cont">
+    <div class="row main-row">
+        <div class="col infocol col-12 col-lg-12 col-sm-10 p-4 d-flex justify-content-center">
+            <div class="card" style="width: 20rem;">
+                <h5 class="userName text-center pt-3">Hello, Avinash</h5>
+              <div class="card-body userimgdiv d-flex justify-content-center">
+                <img src="../assets/unnamed.png" class="img-fluid img-thumbnail userImg" alt="Profile Pic">
+                 
+              </div>
+              <div class="uploadimgrow p-0">
+                <input type="file" name="Upload" accept="image/png, image/jpeg" id="userImg">
+                 <label for="userImg" class="btn btn-primary uploadImg">Upload Image</label>
+              </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">E-mail: <span class="userEmail">avinashj140701@gmail.com</span></li>
+                  <li class="list-group-item">Address:
+                    <br><span class="address">Shivaji Nagar, Balkum, Thane</span></li>
+                  <li class="list-group-item">Mobile: 
+                    <br><span class="userMob">9137724655</span></li>
+                  <li class="list-group-item">Date Of Birth:
+                    <br><span class="userdob">14/07/2001</span><li>
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link">Edit Profile</a>
+               </div>
+            </div>
         </div>
-
-        <div class="checkoutdiv">
-          <button class="btn btn-primary ml-auto checkoutbtn">Proceed To Checkout</button>
-        </div>
-
+        
     </div>
-    
-    
-
-
-    
-    
-    <!-- Cart -->
+</div>
 
 
 
 
 
 
-    
           <!-- Footer Here -->
           <section id="footer">
             <footer class="bg-light text-center text-lg-start">
@@ -152,6 +159,12 @@
            </section>
           <!-- x Footer Here x -->
 
+    
+
+
+
+
+
  <!-- Fire Base docs-->
  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
@@ -172,7 +185,6 @@ var firebaseConfig = {
  messagingSenderId: "97119473548",
  appId: "1:97119473548:web:b771779313c6f661edd0a9",
  measurementId: "G-BHL874MYW3"
- 
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -186,19 +198,19 @@ const storage = firebase.storage();
 //update firestore
 db.settings({ timestampsInSnapshots: true });
 
+
 </script>
 
-    
+ <!-- Bootstrap JS-->
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+ <!-- Bootstrap JS-->
 
-<!-- Cart js-->
-<script src="../js/all-products.js"></script>
-
-
-    <!-- Bootstrap JS-->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
-    <!-- Bootstrap JS-->
+ <script src="../js/accounts.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/particles.js"></script>
 </body>
 </html>
+

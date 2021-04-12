@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@200&display=swap');
+
+
+:root{
+    /* Font Color */
+    --nav-bar-grey: #3f4957;
+    --cool-gray: #ADB5BD;
+    --French-Gray: #6C757D;
+    --Neutral-grey: #E9ECEF;
+    --Black-Tint: #343A40;
+    --white: white;
+  
+  
+    
+  
+  
+  
+    /* Font Color */
+    
+    /* Gradient Color */
+    --grey-tint: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
+    /* Gradient Color */
+    
+    /* Theme Font Family */
+    --Audiowide:'Audiowide',cursive;
+    --Ubuntu:'Ubuntu',cursive;
+    --Roboto:'Roboto',cursive;
+    --Nunito:'Nunito Sans',cursive;
+    --Abel:'Abel',cursive;
+    --saria: 'Saira Condensed', cursive;
+    /* Theme Font Family */
+    
+  
+  }
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: var(--Abel);    
+    
+    
+  }
+
+  #particle-js{
+    width: 100%;
+    background: red;
+  }
+
+  .navbar-brand{
+    font-family: var(--Audiowide) !important;
+  }
+  .userImg{
+    border-radius: 50%;
+    
+  }
+
+  #userImg{
+    opacity: 0;
+    display: flex;
+  }
+
+  .uploadImg{
+    background-color: transparent;
+    border: none;
+    border-radius: 3rem;
+    color: var(--Black-Tint);
+    margin-left: 6.5rem;
+    transform: translateY(-3rem);
+    padding-bottom: 0;
+  }
+
+  .uploadImg:hover{
+    background-color: var(--cool-gray);
+    color: var(--Black-Tint);
+  }
+
+
+.userimgdiv{
+  width: 100px;
+  margin-left: 7rem;
+}
+
+.editprof{
+  padding-top: 3rem;
+}
+
+
+
+
+
+  /**-----------Footer--------------**/
+
+a.company-name{
+  font-family: var(--Audiowide) !important;
+}
+
+.rate-text{
+  font-family: var(--Nunito);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.rating-wrapper {
+  direction: rtl;
+}
+
+.rating-wrapper input{
+  display: none;
+}
+.rating-wrapper label{
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.8rem;
+
+}
+
+.rating-wrapper label:before{
+  content: '\2605';
+  color: black;
+  position: absolute;
+  font-size: 25px;
+  display: inline-block;
+  top: 6rem;
+  
+  
+
+}
+
+.rating-wrapper label:after{
+  content: '\2605';
+  color: yellow;
+  position: absolute;
+  font-size: 25px;
+  display: inline-block;
+  top: 6rem;
+  opacity: 0;
+  
+}
+
+.rating-wrapper label:hover:after,
+.rating-wrapper label:hover ~ label:after,
+.rating-wrapper input:checked ~ label:after{
+  opacity: 1;
+}
+
+.footer-bg{
+  margin-top: 1.2rem;
+  width: 100%;
+  background-size: cover;
+  
+}
+/**-----x------Footer---------x-----**/
+

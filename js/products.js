@@ -11,11 +11,5 @@
 // });
 
 
-const logout = (e) =>{
-    const promise = auth.signOut();
-    
-    promise.catch(e => console.log('logged out'));
-    promise.then(e => {window.location.href = "./index.html"; });
-}
 
     
